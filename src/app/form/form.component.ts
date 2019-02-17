@@ -15,9 +15,11 @@ export class FormComponent implements OnInit {
   
   ngOnInit() {
     this.formGroup = this.FormBuild.group({
-      fistName: this.FormBuild.control(''),
+      firstName: this.FormBuild.control(''),
       lastName: ['']
     })
   }
- 
+ onSubmit(form: FormGroup){
+   console.log(form);
+ }
 }
